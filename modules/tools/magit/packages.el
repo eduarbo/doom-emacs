@@ -15,4 +15,8 @@
     (package! magithub))
   (package! magit-todos)
   (when (featurep! :feature evil +everywhere)
-    (package! evil-magit)))
+    (package! evil-magit :recipe
+      (:fetcher github
+                :repo "emacs-evil/evil-magit"
+                :commit "2915d7796db3cd85c414478c3192674776cdaf5e"
+                :files ("evil-magit.el")))))
